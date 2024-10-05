@@ -20,6 +20,29 @@ return {
           ['\\'] = 'close_window',
         },
       },
+      filtered_items = {
+        visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+        hide_dotfiles = false,
+        hide_gitignored = true,
+      },
+    },
+    default_component_configs = {
+      git_status = {
+        symbols = {
+          -- Change type
+          added = '✚', -- NOTE: you can set any of these to an empty string to not show them
+          deleted = '✖',
+          modified = '',
+          renamed = '',
+          -- Status type
+          untracked = '',
+          ignored = '',
+          unstaged = '',
+          staged = '',
+          conflict = '',
+        },
+        align = 'right',
+      },
     },
   },
 }
