@@ -20,6 +20,7 @@
 - '<C-i>' jump to newer position
 
 - '\' open file tree
+- '<C-Space>' open terminal
 
 while in neotree:
 
