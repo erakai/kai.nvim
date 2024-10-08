@@ -79,7 +79,8 @@ require('lazy').setup({
   { import = 'custom.plugins' },
 
   -- Non kickstart plugins
-  require 'plugins/terminal',
+  -- require 'plugins/terminal'
+  require 'plugins/tmux',
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

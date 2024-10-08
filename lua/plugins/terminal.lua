@@ -18,7 +18,7 @@ return {
     version = '*',
     opts = {
       open_mapping = [[<C-space>]],
-      --      direction = 'float',
+      direction = 'float',
     },
   },
 }

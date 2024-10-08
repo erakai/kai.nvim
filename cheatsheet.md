@@ -22,12 +22,17 @@
 - '\' open file tree
 - '<C-Space>' open terminal
 
-while in neotree:
+# Tmux Keybindings
+Everything begins with prefix.
 
-- `S` open split
-- `s` open vsplit
-- `t` open tab new
-- `a` add file
-- `A` add directory
-- `d` delete
-- `r` rename
+- `-` for horizontal split
+- `|` for vertical split
+- `C-Arrow` resize pane
+- `n(ext), p(previous), l(ast)` swap winodows
+- `q` close pane
+- `!` convert pane to window
+- `,` rename window
+- `$` rename session
+
+- `tmux a -t sessionname`
+- `tmux kill-session -t sessionname`
