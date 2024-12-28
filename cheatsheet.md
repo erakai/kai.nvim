@@ -8,6 +8,9 @@
 - `<leader>ds` search symbols in current file
 - `<leader>cs` choose color scheme
 
+- `<leader>ca` use fix available
+
+- `<leader>g` hover description
 - `gr` jump to references
 - `gd` jump to definition
 - `gD` jump to type definition
@@ -20,7 +23,6 @@
 - '<C-i>' jump to newer position
 
 - '\' open file tree
-- '<C-Space>' open terminal
 
 # Tmux Keybindings
 Everything begins with prefix.
@@ -28,7 +30,7 @@ Everything begins with prefix.
 - `-` for horizontal split
 - `|` for vertical split
 - `C-Arrow` resize pane
-- `n(ext), p(previous), l(ast)` swap winodows
+- `n(ext), p(previous), l(ast)` swap windows
 - `q` close pane
 - `!` convert pane to window
 - `,` rename window

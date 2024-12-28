@@ -56,6 +56,10 @@ require('lazy').setup({
     end,
   },
 
+  {
+    'Vimjas/vim-python-pep8-indent',
+  },
+
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -82,25 +86,7 @@ require('lazy').setup({
   -- require 'plugins/terminal'
   require 'plugins/tmux',
 }, {
-  ui = {
-    -- If you are using a Nerd Font: set icons to an empty table which will use the
-    -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
-    icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
-    },
-  },
+  ui = {},
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`

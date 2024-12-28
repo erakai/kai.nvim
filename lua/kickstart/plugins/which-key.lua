@@ -19,6 +19,7 @@ return {
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
     opts = {
       icons = {
+        separator = '→',
         -- set icon mappings to true if you have a Nerd Font
         mappings = vim.g.have_nerd_font,
         -- If you are using a Nerd Font: set icons.keys to an empty table which will use the
@@ -67,4 +68,5 @@ return {
       },
     },
   },
+  'nvim-tree/nvim-web-devicons',
 }

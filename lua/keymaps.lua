@@ -4,6 +4,9 @@
 vim.keymap.set({ 'i' }, 'jk', '<Esc>')
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<NOP>')
 
+vim.keymap.set({ 'n' }, '<leader>fe', ':TOhtml ./temp.html <Cr> <C-w><C-c>', { desc = 'Export current file to html' })
+vim.keymap.set({ 'n' }, '<leader>g', '<cmd>lua vim.lsp.buf.hover()<cr>', { desc = 'LSP: Hover description' })
+
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
