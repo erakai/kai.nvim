@@ -1,4 +1,4 @@
-# Important Keybindings
+#Important Keybindings
 
 - `:Lazy` to open package manager
 
