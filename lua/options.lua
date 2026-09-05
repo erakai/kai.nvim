@@ -9,10 +9,10 @@ vim.opt.foldenable = false
 vim.opt.foldlevel = 20
 
 -- Tab size
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
-vim.bo.softtabstop = 2
+vim.bo.softtabstop = 4
 
 -- Use system clipboard
 vim.opt.clipboard = 'unnamedplus'
