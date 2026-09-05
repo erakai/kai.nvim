@@ -23,20 +23,23 @@
 -- Set <space> as the leader key
 -- See `:help mapleader`
 --  NOTE: Must happen before plugins are loaded (otherwise wrong leader will be used)
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
 
+-- Disable comments that begin with vim: or ex: from being evaluated
+vim.o.modeline = false
+
 -- [[ Setting options ]]
-require 'options'
+require("options")
 
 -- [[ Basic Keymaps ]]
-require 'keymaps'
+require("keymaps")
 
 -- [[ Install `lazy.nvim` plugin manager ]]
-require 'lazy-setup'
+require("lazy-setup")
 
 -- [[ Configure and install plugins ]]
 --
@@ -47,46 +50,57 @@ require 'lazy-setup'
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
-  {
-    'ellisonleao/gruvbox.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd 'colorscheme gruvbox'
-    end,
-  },
+require("lazy").setup({
+	{
+		"ellisonleao/gruvbox.nvim",
+		priority = 1000,
+		config = function()
+			vim.cmd("colorscheme gruvbox")
+		end,
+	},
 
-  {
-    'Vimjas/vim-python-pep8-indent',
-  },
+	{
+		"MeanderingProgrammer/render-markdown.nvim",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-mini/mini.nvim" },
+		file_types = { "markdown", "conf" },
+	},
 
-  -- Highlight todo, notes, etc in comments
-  { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+	{
+		"Vimjas/vim-python-pep8-indent",
+	},
 
-  require 'kickstart/plugins/git-signs-basic',
-  require 'kickstart/plugins/which-key',
-  require 'kickstart/plugins/telescope',
-  require 'kickstart/plugins/lspconfig',
-  require 'kickstart/plugins/autoformat',
-  require 'kickstart/plugins/autocomplete',
-  require 'kickstart/plugins/mini',
-  require 'kickstart/plugins/treesitter',
-  -- require 'kickstart/plugins/debug',
-  require 'kickstart/plugins/indent_line',
-  -- require 'kickstart/plugins/lint',
-  require 'kickstart/plugins/autopairs',
-  require 'kickstart/plugins/neo-tree',
-  -- require 'kickstart/plugins/gitsigns', -- adds gitsigns recommend keymaps
+	-- Highlight todo, notes, etc in comments
+	{
+		"folke/todo-comments.nvim",
+		event = "VimEnter",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = { signs = false },
+	},
 
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  { import = 'custom.plugins' },
+	require("kickstart/plugins/git-signs-basic"),
+	require("kickstart/plugins/which-key"),
+	require("kickstart/plugins/telescope"),
+	require("kickstart/plugins/lspconfig"),
+	require("kickstart/plugins/autoformat"),
+	require("kickstart/plugins/autocomplete"),
+	require("kickstart/plugins/mini"),
+	require("kickstart/plugins/treesitter"),
+	-- require 'kickstart/plugins/debug',
+	require("kickstart/plugins/indent_line"),
+	-- require 'kickstart/plugins/lint',
+	require("kickstart/plugins/autopairs"),
+	require("kickstart/plugins/neo-tree"),
+	-- require 'kickstart/plugins/gitsigns', -- adds gitsigns recommend keymaps
 
-  -- Non kickstart plugins
-  -- require 'plugins/terminal'
-  require 'plugins/tmux',
+	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
+	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
+	{ import = "custom.plugins" },
+
+	-- Non kickstart plugins
+	-- require 'plugins/terminal'
+	require("plugins/tmux"),
 }, {
-  ui = {},
+	ui = {},
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
